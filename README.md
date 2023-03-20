@@ -84,3 +84,6 @@
 
 ### Dry Run: reset the offsets to the beginning of each partition
 `kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group my-first-application --reset-offsets --to-earliest --topic third_topic --dry-run`
+
+### View the commit logs
+`kafka-run-class.bat kafka.tools.DumpLogSegments --deep-iteration --files /tmp/kafka-logs/test-topic-0/00000000000000000000.log`
